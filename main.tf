@@ -12,8 +12,8 @@ module "labels" {
   environment = "dev"
 }
 
-module "vpc" {
-  source = "./modules/aws-vpc"
+module "network" {
+  source = "./modules/aws-network"
   name   = module.labels.id
   tags   = module.labels.tags
 }
