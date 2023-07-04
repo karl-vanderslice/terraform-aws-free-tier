@@ -15,3 +15,20 @@ variable "enable_dns_hostnames" {
   type        = bool
   default     = true
 }
+
+variable "public_subnet_cidr_block" {
+  description = "The IPv4 CIDR block of the public subnet"
+  type        = string
+  default     = "10.0.1.0/24"
+}
+
+variable "name" {
+  description = "Name for the created VPC and resources."
+  type        = string
+}
+
+variable "tags" {
+  description = "Tags to apply to created resources."
+  type        = map(string)
+  default     = {}
+}

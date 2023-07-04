@@ -6,9 +6,11 @@ terraform {
       source  = "hashicorp/aws"
       version = "= 5.4.0"
     }
+    random = {
+      source  = "hashicorp/random"
+      version = "3.5.1"
+    }
   }
 }
 
-provider "aws" {
-  region = "us-west-2"
-}
+provider "aws" {}
